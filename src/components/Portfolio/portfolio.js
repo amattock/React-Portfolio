@@ -1,85 +1,100 @@
 import React from 'react';
+import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBCarouselCaption, MDBRow, MDBCol } from 'mdbreact';
+
+const agro = require("../../assets/Agrnomix.png");
+const weather = require("../../assets/WthrDash.png");
+const fitness = require("../../assets/wlnswrzrd.png");
+const note = require("../../assets/NtTakr.png");
+const quiz = require("../../assets/CodeQuiz.png");
+const scheduler = require("../../assets/WrkDaySchdlr.png");
 
 const Portfolio = () => {
   return (
-    <section className="">
-      <div className="container-fluid px-0">
-        <div className="row g-0">
+    <section style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+      <div style={{ width: '75%' }}>
+      <MDBRow>
+        <MDBCol md="12" className="text-center">
+          <h2> My Portfoloios</h2>
+          <hr className="solid bg-dark" />
+        </MDBCol>
+      </MDBRow>
+        <MDBCarousel
+          activeItem={1}
+          length={6}
+          showControls={true}
+          showIndicators={true}
+          className="z-depth-1"
+        >
+          <MDBCarouselInner>
+            
+            <MDBCarouselItem itemId="1">
+              <img
+                className="d-block w-100"
+                src={agro}
+                alt="Agronomix Weather App for Farmers"
+              />
+              <MDBCarouselCaption>
+                <a className="h3-responsive" href="https://github.com/amattock/Agronomix">Agronomix Weather App for Farmers</a>
+              </MDBCarouselCaption>
+            </MDBCarouselItem>
 
-          {/* First column */}
-          <div className="col-lg-6 vh-100">
-            {/* Content for the first column */}
-          </div>
-          {/* First column */}
-
-          {/* Second column */}
-          <div className="col-lg-6 vh-100">
+            <MDBCarouselItem itemId="2">
+                  <img
+                    className="d-block w-100"
+                    src={weather}
+                    alt="Weather Dashboard App by City and State"
+                  />
+                  <MDBCarouselCaption>
+                    <a className="h3-responsive" href= "https://github.com/amattock/Weather-Dashboard">Weather Dashboard App by City and State</a>
+                  </MDBCarouselCaption>
+                </MDBCarouselItem>
+                <MDBCarouselItem itemId="3">
+                  <img
+                    className="d-block w-100"
+                    src={fitness}
+                    alt="Wellness Wizard App for Fitness Tracking"
+                  />
+                  <MDBCarouselCaption>
+                    <a className="h3-responsive" href="https://github.com/JackStendeback/WellnessWizard">Wellness Wizard App for Fitness Tracking</a>
+                  </MDBCarouselCaption>
+                </MDBCarouselItem>
+                <MDBCarouselItem itemId="4">
+                  <img
+                    className="d-block w-100"
+                    src={note}
+                    alt="Note Taker App"
+                  />
+                  <MDBCarouselCaption>
+                    <a className="h3-responsive" href="https://github.com/amattock/Note-Taker">Note Taker App for notes on the fly</a>
+                  </MDBCarouselCaption>
+                </MDBCarouselItem>
+                <MDBCarouselItem itemId="5">
+                  <img
+                    className="d-block w-100"
+                    src={quiz}
+                    alt="Code Quiz"
+                  />
+                  <MDBCarouselCaption>
+                    <a className="h3-responsive" href="https://github.com/amattock/Multiple-Choice-Quiz">Code Quiz for testing your Knowledge!</a>
+                  </MDBCarouselCaption>
+                </MDBCarouselItem>
+                <MDBCarouselItem itemId="6">
+                  <img
+                    className="d-block w-100"
+                    src={scheduler}
+                    alt="Work Day Scheduler"
+                  />
+                  <MDBCarouselCaption>
+                    <a className="h3-responsive"href="https://github.com/amattock/Work-Day-Scheduler" >Work Day Scheduler for Keeping Track of Events!</a>
+                  </MDBCarouselCaption>
+                </MDBCarouselItem>
+              </MDBCarouselInner>
+            </MDBCarousel>
             {/* Carousel wrapper */}
-            <div id="carouselBasicExample" className="carousel slide carousel-fade" data-mdb-ride="carousel">
-              {/* Indicators */}
-              <div className="carousel-indicators">
-                <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="0" className="active"
-                  aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="1"
-                  aria-label="Slide 2"></button>
-                <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="2"
-                  aria-label="Slide 3"></button>
-              </div>
-
-              {/* Inner */}
-              <div className="carousel-inner">
-                {/* Single item */}
-                <div className="carousel-item active">
-                  <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(15).webp" className="d-block w-100"
-                    alt="Sunset Over the City" />
-                  <div className="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                  </div>
-                </div>
-
-                {/* Single item */}
-                <div className="carousel-item">
-                  <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(22).webp" className="d-block w-100"
-                    alt="Canyon at Night" />
-                  <div className="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                </div>
-
-                {/* Single item */}
-                <div className="carousel-item">
-                  <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(23).webp" className="d-block w-100"
-                    alt="Cliff Above a Stormy Sea" />
-                  <div className="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                  </div>
-                </div>
-              </div>
-              {/* Inner */}
-
-              {/* Controls */}
-              <button className="carousel-control-prev" type="button" data-mdb-target="#carouselBasicExample"
-                data-mdb-slide="prev">
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span className="visually-hidden">Previous</span>
-              </button>
-              <button className="carousel-control-next" type="button" data-mdb-target="#carouselBasicExample"
-                data-mdb-slide="next">
-                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                <span className="visually-hidden">Next</span>
-              </button>
-            </div>
-            {/* Carousel wrapper */}
           </div>
           {/* Second column */}
-
-        </div>
-      </div>
-    </section>
-  );
-};
+        </section>
+      );
+    }
 
 export default Portfolio;

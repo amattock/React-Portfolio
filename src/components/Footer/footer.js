@@ -1,33 +1,27 @@
 import React from "react";
 import { VscGithubAlt } from "react-icons/vsc";
 import { AiOutlineLinkedin } from "react-icons/ai";
-import { FaInstagram } from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer>
-      <h2>Made by Lindsey Martin©</h2>
-      <p>
-        <ul>
-          <a href="https://github.com/Lemming97">
-            <li className="logo">
-              <VscGithubAlt />
-            </li>
+    <footer style={{ position: "fixed", bottom: "0", width: "100%", textAlign: "center", background: "orange", color: "white", md: "12" }}>
+        
+      <ul style={{ listStyle: "none", padding: "0", display: "flex", justifyContent: "center" }}>
+        <li style={{ marginTop: "10px" }}>
+          <a href="https://github.com/amattock">
+            <VscGithubAlt style={{ fontSize: "2em", color: "white" }} />
           </a>
-          <a href="https://www.linkedin.com/in/lindsey-m-2219abb0/">
-            <li className="logo">
-              <AiOutlineLinkedin />
-            </li>
+        </li>
+        <li style={{ marginTop: "10px" }}>
+          <a href="https://www.linkedin.com/in/alexandermattock/">
+            <AiOutlineLinkedin style={{ fontSize: "2em", color: "white" }} />
           </a>
-          <a href="https://www.instagram.com/lem_photos/">
-            <li className="logo">
-              <FaInstagram />
-            </li>
-          </a>
-        </ul>
-      </p>
+        </li>
+      </ul>
+    
     </footer>
   );
 }
 
 export default Footer;
+

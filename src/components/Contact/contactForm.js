@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { MDBBtn, MDBInput } from 'mdbreact';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -17,7 +18,7 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can add code here to handle the form submission, like sending data to a server or displaying the information.
+  
     console.log('Form submitted with data:', formData);
     // Reset the form after submission
     setFormData({
@@ -31,7 +32,7 @@ const ContactForm = () => {
     <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="name">Name:</label>
-        <input
+        <MDBInput
           type="text"
           id="name"
           name="name"
@@ -42,7 +43,7 @@ const ContactForm = () => {
       </div>
       <div>
         <label htmlFor="email">Email:</label>
-        <input
+        <MDBInput
           type="email"
           id="email"
           name="email"
@@ -53,15 +54,16 @@ const ContactForm = () => {
       </div>
       <div>
         <label htmlFor="message">Message:</label>
-        <textarea
+        <MDBInput
+          type="textarea"
           id="message"
           name="message"
           value={formData.message}
           onChange={handleChange}
           required
-        ></textarea>
+        />
       </div>
-      <button type="submit">Submit</button>
+      <MDBBtn type="submit">Submit</MDBBtn>
     </form>
   );
 };

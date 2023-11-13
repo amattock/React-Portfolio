@@ -2,6 +2,7 @@ import React from "react";
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import Resume from "../../assets/AlexResume.pdf";
 
+
 const AboutMe = () => {
   return (
     <MDBContainer className="mt-5">
@@ -13,5 +14,6 @@ const AboutMe = () => {
     </MDBContainer>
   );
 };
+
 
 export default AboutMe;
